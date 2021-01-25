@@ -28,6 +28,15 @@ class FormatChecker
     end
   end
 
+  def line_length
+    @lines.each_with_index do |line, line_num|
+      if line.length > 120
+        message_error = "#{@file_path}: line:#{line_num + 1} Line too long"
+        @errors << message_error
+      end
+    end
+  end
+
   def last_empty_line
     @lines.each_with_index do |line, line_num|
       if @lines[-1].empty?
