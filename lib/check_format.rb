@@ -37,6 +37,15 @@ class FormatChecker
     end
   end
 
+  def space_after_line
+    @lines.each_with_index do |line, line_num|
+      if line[-2] == ' ' && !line.strip.empty?
+        message_error = "#{@file_path}: line:#{line_num + 1} Unexpected space at the end of the line"
+        @errors << message_error
+      end
+    end
+  end
+
   def last_empty_line
     @lines.each_with_index do |line, line_num|
       if @lines[-1].empty?

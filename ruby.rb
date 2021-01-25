@@ -1,6 +1,6 @@
 class justForCheck
   def initialize(num)
-    @num = num
+    @num = num  
   end
 end
 
