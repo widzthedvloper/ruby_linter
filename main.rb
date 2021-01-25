@@ -3,5 +3,8 @@ require_relative 'lib/check_format'
 
 msg = FormatChecker.new(ARGV.first)
 
-puts msg.lines
+msg.check_camel_case
+msg.space_btw_methods
+msg.last_empty_line
+puts msg.errors
 puts msg.line_number

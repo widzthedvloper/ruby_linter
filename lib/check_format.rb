@@ -1,10 +1,39 @@
 require_relative 'read_file'
 class FormatChecker
-  attr_reader :file, :lines, :line_number
+  attr_reader :file, :lines, :line_number, :errors
 
   def initialize(file_path)
+    @file_path = file_path
     @file = ReadFile.new(file_path)
     @lines = @file.lines
     @line_number = @file.line_number
+    @errors = []
+  end
+
+  def check_camel_case
+    @lines.each_with_index do |line, line_num|
+      if line.match(/class\b/) && !line.match(/\b[A-Z]/)
+        message_error = "#{@file_path}: line:#{line_num + 1} use CamelCase after class keyword"
+        @errors << message_error
+      end
+    end
+  end
+
+  def space_btw_methods
+    @lines.each_with_index do |line, line_num|
+      if line.match(/def\b/) && !@lines[line_num - 1].strip.empty?
+        message_error = "#{@file_path}: line:#{line_num + 1} Expected empty line before def keyword"
+        @errors << message_error
+      end
+    end
+  end
+
+  def last_empty_line
+    @lines.each_with_index do |line, line_num|
+      if @lines[-1].empty?
+        message_error = "#{@file_path}: line:#{line_num + 1} Expected empty line at the end"
+        @errors << message_error
+      end
+    end
   end
 end
