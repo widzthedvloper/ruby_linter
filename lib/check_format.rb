@@ -10,6 +10,13 @@ class FormatChecker
     @errors = []
   end
 
+  def show_result
+    check_camel_case
+    space_btw_methods
+    line_length
+    space_after_line
+  end
+
   private
 
   def check_camel_case
@@ -46,14 +53,5 @@ class FormatChecker
         @errors << message_error
       end
     end
-  end
-
-  public
-
-  def show_result
-    check_camel_case
-    space_btw_methods
-    line_length
-    space_after_line
   end
 end
