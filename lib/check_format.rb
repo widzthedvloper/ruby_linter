@@ -10,6 +10,8 @@ class FormatChecker
     @errors = []
   end
 
+  private
+
   def check_camel_case
     @lines.each_with_index do |line, line_num|
       if line.match(/class\b/) && !line.match(/\b[A-Z]/)
@@ -44,5 +46,14 @@ class FormatChecker
         @errors << message_error
       end
     end
+  end
+
+  public
+
+  def show_result
+    check_camel_case
+    space_btw_methods
+    line_length
+    space_after_line
   end
 end
