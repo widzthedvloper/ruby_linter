@@ -1,5 +1,5 @@
 #!/usr/bin/env ruby
-require_relative 'lib/check_format'
+require_relative '../lib/check_format'
 
 msg = FormatChecker.new(ARGV.first)
 msg.show_result
