@@ -45,13 +45,4 @@ class FormatChecker
       end
     end
   end
-
-  def last_empty_line
-    @lines.each_with_index do |line, line_num|
-      if @lines[-1].empty?
-        message_error = "#{@file_path}: line:#{line_num + 1} Expected empty line at the end"
-        @errors << message_error
-      end
-    end
-  end
 end

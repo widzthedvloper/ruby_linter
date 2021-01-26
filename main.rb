@@ -5,7 +5,6 @@ msg = FormatChecker.new(ARGV.first)
 
 msg.check_camel_case
 msg.space_btw_methods
-msg.last_empty_line
 msg.line_length
 msg.space_after_line
 puts msg.errors
