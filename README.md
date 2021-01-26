@@ -13,10 +13,50 @@
 ![](assets/running_code.jpeg)
 
 # Bad Code
-![](assets/bad_code.jpeg)
+```ruby
+class justForCheck1
+  def initialize(num)
+    @num = num
+  end
+end
+
+class justForCheck2
+  def initialize(num)
+    @num = num jjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjj
+  end
+end
+
+class JustForCheck3
+
+  def initialize(num)
+    @num = num
+  end
+end
+```
 
 # Good Code
-![](assets/good_code.jpeg)
+```Ruby
+class JustForCheck1
+
+  def initialize(num)
+    @num = num
+  end
+end
+
+class JustForCheck2
+
+  def initialize(num)
+    @num = num
+  end
+end
+
+class JustForCheck3
+
+  def initialize(num)
+    @num = num
+  end
+end
+```
 
 ## Built With
 
