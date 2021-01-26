@@ -68,7 +68,7 @@ end
 - Open the terminal command line.
 - Clone the repo:--> git clone https://github.com/widzthedvloper/ruby_linter.git
 - cd ruby_linter
-- type ruby main.rb good_ruby.rb or ruby main.rb bad_ruby.rb to use the linter on those files in the repo or provide a path to your own ruby file.
+- type ruby ./bin/main.rb  bad_ruby.rb or ruby ./bin/main.rb  good_ruby.rb to use the linter on those files in the repo or provide a path to your own ruby file.
 
 ## Authors
 
