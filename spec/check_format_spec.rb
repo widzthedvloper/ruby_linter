@@ -1,7 +1,6 @@
 require_relative '../lib/check_format'
 
 describe FormatChecker do
-  let(:data) { Array.new([]) }
   path = File.absolute_path('../ruby_linter/good_ruby.rb')
   msg_array = FormatChecker.new(path)
   describe '#show_result' do
