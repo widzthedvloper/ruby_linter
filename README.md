@@ -4,13 +4,13 @@
 > A custom linter for ruby files! In this project, we passed an argument(file path) from the command line to our executable file and go through the file line by line to detect some predetermined ruby offenses.
 
 # Runnig App
-![](assets/running_code.JPG)
+![](assets/running_code.jpeg)
 
 # Bad Code
-![](assets/bad_code.JPG)
+![](assets/bad_code.jpeg)
 
 # Good Code
-![](assets/good_code.JPG)
+![](assets/good_code.jpeg)
 
 ## Built With
 
