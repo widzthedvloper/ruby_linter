@@ -3,6 +3,12 @@
 
 > A custom linter for ruby files! In this project, we passed an argument(file path) from the command line to our executable file and go through the file line by line to detect some predetermined ruby offenses.
 
+# What this linter complain about:
+- It expects a capitalized word After class keywords. 
+- It expects an empty line before def keywords
+- It expects a maximum length of 120 characters for each line.
+- Complains if there's a trailing space at the end of a line
+
 # Runnig App
 ![](assets/running_code.jpeg)
 
