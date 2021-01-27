@@ -1,4 +1,6 @@
 require_relative 'read_file'
+require 'colorize'
+
 class FormatChecker
   attr_reader :file, :lines, :line_number, :errors
 
@@ -22,7 +24,7 @@ class FormatChecker
   def check_camel_case
     @lines.each_with_index do |line, line_num|
       if line.match(/class\b/) && !line.match(/\b[A-Z]/)
-        message_error = "#{@file_path}: line:#{line_num + 1} use CamelCase after class keyword"
+        message_error = "#{@file_path}: line:#{line_num + 1} use CamelCase after class keyword".colorize(:red)
         @errors << message_error
       end
     end
@@ -31,7 +33,7 @@ class FormatChecker
   def space_btw_methods
     @lines.each_with_index do |line, line_num|
       if line.match(/def\b/) && !@lines[line_num - 1].strip.empty?
-        message_error = "#{@file_path}: line:#{line_num + 1} Expected empty line before def keyword"
+        message_error = "#{@file_path}: line:#{line_num + 1} Expected empty line before def keyword".colorize(:red)
         @errors << message_error
       end
     end
@@ -40,7 +42,7 @@ class FormatChecker
   def line_length
     @lines.each_with_index do |line, line_num|
       if line.length > 120
-        message_error = "#{@file_path}: line:#{line_num + 1} Line too long"
+        message_error = "#{@file_path}: line:#{line_num + 1} Line too long".colorize(:red)
         @errors << message_error
       end
     end
@@ -49,7 +51,7 @@ class FormatChecker
   def space_after_line
     @lines.each_with_index do |line, line_num|
       if line[-2] == ' ' && !line.strip.empty?
-        message_error = "#{@file_path}: line:#{line_num + 1} Unexpected space at the end of the line"
+        message_error = "#{@file_path}: line:#{line_num + 1} Unexpected space at the end of the line".colorize(:red)
         @errors << message_error
       end
     end

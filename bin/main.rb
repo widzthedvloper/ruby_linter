@@ -5,7 +5,7 @@ msg = FormatChecker.new(ARGV.first)
 msg.show_result
 if !msg.errors.empty?
   puts msg.errors
-  puts "This file contains #{msg.line_number} lines of code"
+  puts "This file contains #{msg.line_number} lines of code".colorize(:yellow)
 else
-  puts "there's no offenses in this file"
+  puts "there's no offenses in this file".colorize(:green)
 end
