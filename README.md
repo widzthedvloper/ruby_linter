@@ -10,7 +10,7 @@
 - Complains if there's a trailing space at the end of a line
 
 # Runnig App
-![](assets/running_code.jpeg)
+![](assets/running_code.png)
 
 # Bad Code
 ```ruby
@@ -69,6 +69,10 @@ end
 - Clone the repo:--> git clone https://github.com/widzthedvloper/ruby_linter.git
 - cd ruby_linter
 - type ruby ./bin/main.rb  bad_ruby.rb or ruby ./bin/main.rb  good_ruby.rb to use the linter on those files in the repo or provide a path to your own ruby file.
+
+## RSPEC test
+
+- Type rspec in the root directory to test my methods.
 
 ## Authors
 
