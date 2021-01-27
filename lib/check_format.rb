@@ -1,5 +1,5 @@
-require_relative 'read_file'
 require 'colorize'
+require_relative 'read_file'
 
 class FormatChecker
   attr_reader :file, :lines, :line_number, :errors
