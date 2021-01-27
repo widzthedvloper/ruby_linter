@@ -70,6 +70,12 @@ end
 - cd ruby_linter
 - type ruby ./bin/main.rb  bad_ruby.rb or ruby ./bin/main.rb  good_ruby.rb to use the linter on those files in the repo or provide a path to your own ruby file.
 
+## Prerequisite for a better experience
+
+- gem 'bundler'
+- gem 'colorize'
+- you can search for those gem [here](https://rubygems.org/)
+
 ## RSPEC test
 
 - Type rspec in the root directory to test my methods.
